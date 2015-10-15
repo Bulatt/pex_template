@@ -1,0 +1,23 @@
+{
+  "name": "pex_template",
+  "version": "0.0.0",
+  "authors": [
+    "Bulat Abyanov <boolmc@yandex.ru>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+     "normalize.css": "*",
+     "jquery": "2.*"
+   }
+}
