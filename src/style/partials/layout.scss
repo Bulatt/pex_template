@@ -1,3 +1,101 @@
-body {
-  font-size: 10px;
+.header {
+  overflow: hidden;
+
+  height: 891px;
+  &__bottom {
+    margin-top: 200px;
+  }
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.logo-wrap {
+  margin: 45px 0 32px 0;
+  padding: 0 10px;
+  &--left {
+    float: left;
+  }
+  &--right {
+    float: right;
+  }
+}
+
+.menu-wrap {
+  margin-top: 31px;
+  padding: 0 10px;
+  &--right {
+    float: right;
+  }
+  &--left {
+    float: left;
+  }
+}
+
+.section-text {
+  padding: 20px;
+  &--left {
+    float: left;
+
+    width: 44%;
+  }
+  &--right {
+    float: right;
+
+    width: 44%;
+  }
+  &--center {
+    width: 100%;
+  }
+}
+
+.section-one {
+  padding-top: 5px;
+  &__wrap {
+    margin: 0 13.5%;
+    padding-bottom: 70px;
+  }
+}
+
+.desc {
+  margin: 70px 0;
+  &__item {
+    float: left;
+
+    box-sizing: border-box;
+    width: 50%;
+    padding: 0 3%;
+  }
+}
+
+.section-two-wpar {
+  padding: 100px 200px 175px;
+}
+
+.about {
+  width: 40%;
+
+  &--left {
+    float: left;
+  }
+
+  &--right {
+    float: right;
+  }
+}
+
+.content {
+  box-sizing: border-box;
+  width: 60%;
+  &--left {
+    float: left;
+    padding: 5% 5% 5% 8%;
+  }
+
+  &--right {
+    float: right;
+    padding: 5% 8% 5% 5%;
+  }
 }

@@ -2,6 +2,85 @@
 html(lang="en")
 head
   meta(charset="UTF-8")
-  title Document
+  title Pex template
+  link(href='css/main.css', rel='stylesheet')
+  link(href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700italic,700,800italic,800', rel='stylesheet', type='text/css')
 body
+  .header
+    .header__top
+      .container.clearfix
+        .logo-wrap.logo-wrap--left
+          a.logo(href="#")
+            img.logo__img(src="img/logo.png", alt="logo")
+        .menu-wrap.menu-wrap--right
+          ul.nav
+            li.nav__item
+              a.nav__link(href="#") About
+            li.nav__item
+              a.nav__link(href="#") How it works
+            li.nav__item
+              a.nav__link(href="#") Services
+            li.nav__item
+              a.nav__link(href="#") Faq
+            li.nav__item
+              a.nav__link(href="#") Contact
+            li.nav__form
+              form.form(action="#")
+                input.form__search(type="search", name="", placeholder="Search Website")
+                input.form__submit(type="submit", name="", value="")
+    .header__bottom
+      .container.clearfix
+        .section-text.section-text--left
+          h1.section-text__title Designs your eyeballs will thank you for
+          a.section-text__btn.btn(href="#") Get started today
+          p.section-text__description.section-text__description--left Lorem ipsum dolor sit amet, consectetur
+  .section-one
+    .container
+      .section-one__wrap
+        .desc.clearfix
+          .desc__item
+            .desc__title A fantastic heading
+            .desc__content Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                           | sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                           | Ut enim ad minim veniam, quis nostrud
+          .desc__item
+            .desc__title Good day blokes
+            .desc__content Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                           | sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                           | Ut enim ad minim veniam, quis nostrud
+        .desc.clearfix
+          .desc__item
+            .desc__title Blaz Robar for president
+            .desc__content Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                           | sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                           | Ut enim ad minim veniam, quis nostrud
+          .desc__item
+            .desc__title Vote for robar
+            .desc__content Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                           | sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                           | Ut enim ad minim veniam, quis nostrud
+  .section-two
+    .container
+      .section-two-wpar
+        .section-text.section-text--center
+          h1.section-text__title.section-text__title--small Wicked & whack, bang bang boo!
+          p.section-text__description.section-text__description--big
+                                                                      | Lorem ipsum dolor sit amet,
+                                                                      | consectetur adipisicing elit, sed do
+                                                                      br
+                                                                      | eiusmod tempor incididunt ut labore et
+                                                                      | dolore magna aliqua. Ut
+          a.section-text__btn.btn.btn--white.btn--big(href="#") Get started today
+  .section-three.clearfix
+    .about.about--left
+      img(src="img/img-about.jpg", alt="About")
+    .content.content--right
+      h2.content__title A heading is what you need here
+      p.content__desc.content__desc--big Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      | ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                      | voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      p.content__desc Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                      | laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                      | laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
+                      | vitae dicta sunt explicabo.
 
