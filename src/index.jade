@@ -2,68 +2,19 @@
 html(lang="en")
 head
   include template/head.jade
+  include template/preloader-styles.jade
+
 body
+  #page-preloader
+        .multi
+          div
   include template/header.jade
   include template/section-one.jade
   include template/section-two.jade
   include template/section-three.jade
-  .section-four
-    .section-four-wrap
-      .container
-        .section-text.section-text--center
-          h1.section-text__title.section-text__title--middle Experience the rush today
-          p.section-text__description.section-text__description--big.section-text__description--blue
-                                                                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                                                      |sed do eiusmod tempor
-                                                                      br
-                                                                      |incididunt ut labore et dolore magna aliqua consectetur adipisicing elit.
-          a.btn(href="#") Get started today
-          p.section-text__description Lorem ipsum dolor sit amet, consectetur
-  .section-five
-    .container
-      .feature-article-wrap.clearfix
-        .carousel
-          .carousel-wrapper
-            .carousel-items.clearfix
-              .feature-article.feature-article--left
-                a.btn.btn--transparent.btn--small(href="#") Photography
-                p.feature-article__post Lorem ipsum dolor sit amet consectetur adipisicing elit
-                .author
-                  img.author__photo(src="img/author.jpg", alt="Blaz Robar")
-                  span.author__job Blaz Robar, god like web designer
-              .feature-article.feature-article--left
-                a.btn.btn--transparent.btn--small(href="#") Projects 
-                p.feature-article__post Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                .author
-                  img.author__photo(src="img/author-2.jpg", alt="Frank Sobatko")
-                  span.author__job Frank Sobatko, frontent developer
-              .feature-article.feature-article--left
-                a.btn.btn--transparent.btn--small(href="#") Projects  
-                p.feature-article__post Duis aute irure dolor in reprehenderit involuptate
-                .author
-                  img.author__photo(src="img/author-3.jpg", alt="Sabina Bryant")
-                  span.author__job Sabina Bryant, Ruby developer
-  .section-three.clearfix
-    .about.about--right
-      img(src="img/img-about2.jpg", alt="About")
-    .content.content--left
-      h2.content__title A heading is what you need here
-      p.content__desc.content__desc--big Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      | ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                      | voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-      p.content__desc Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-                      | laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                      | laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
-                      | vitae dicta sunt explicabo.
-  .section-contact
-    .container
-      .contact-wrap.clearfix
-        .contact.contact--left
-          h2.contact__title Get in touch
-          p.contact__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          a.contact__email(href="mailto:help@yomuma.com") help@yomuma.com
-  .footer
-    .container
-      .footer-wrap
-        p.footer__text.footer__text--center Copyright © 2015 Designed By Blaz Robar
+  include template/section-four.jade
+  include template/section-five.jade
+  include template/section-six.jade
+  include template/section-contact.jade
+  include template/footer.jade
   script(src='js/main.js')

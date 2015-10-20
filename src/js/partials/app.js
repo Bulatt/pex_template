@@ -1,3 +1,13 @@
+// Preloader
+
+$(document).ready(function () {
+    var $preloader = $('#page-preloader'),
+        $spinner   = $preloader.find('.multi');
+    $spinner.fadeOut();
+    $preloader.delay(350).fadeOut('slow');
+});
+
+// Carousel
 function left_carusel(carusel){
    var block_width = $(carusel).find('.feature-article').outerWidth();
    $(carusel).find(".carousel-items .feature-article").eq(-1).clone().prependTo($(carusel).find(".carousel-items"));
