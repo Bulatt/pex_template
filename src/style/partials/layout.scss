@@ -71,6 +71,7 @@
   margin: 70px 0;
   &__item {
     float: left;
+    text-align: justify;
 
     box-sizing: border-box;
     width: 50%;
@@ -80,7 +81,7 @@
 
 // section 2
 .section-two-wpar {
-  padding: 100px 200px 175px;
+  padding: 100px 25px 175px;
 }
 
 // section 3
@@ -178,4 +179,21 @@
   &--right {
     text-align: right;
   }
+}
+
+// carousel
+
+.carousel {
+  max-width: 800px;
+}
+
+.carousel-wrapper {
+  width: 600px;
+   overflow: hidden; 
+   position:relative;
+}
+
+.carousel-items {
+   width: 10000px; 
+   position: relative; 
 }

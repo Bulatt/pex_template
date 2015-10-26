@@ -17,9 +17,11 @@ $color-form-search-text: #626262;
 $color-search-focus: #3c2c3b;
 $color-bg-btn-default: #8824cd;
 $color-bg-btn-white: #ffffff;
+$color-bg-btn-transparent: rgba(240,240,240, .3);
 $color-bg-section-one: #2e3b4e;
 $color-section-one-line: #d54c63;
 $color-section-three-text: #3a4d60;
+$color-section-four-wrap: rgba(82,26,102,.8);
 $color-bg-contact: #e7526b;
 $color-bg-footer: #2e3b4e;
 
@@ -27,6 +29,9 @@ $color-bg-footer: #2e3b4e;
 $bg-header: url(../img/header-bg.jpg);
 $bg-form-search: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAANCAYAAACZ3F9/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDE0IDc5LjE1Njc5NywgMjAxNC8wOC8yMC0wOTo1MzowMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkMwMTdCQ0RDNzQyQTExRTU5QzgxQTBBMTRGMjUzQTBDIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkMwMTdCQ0RENzQyQTExRTU5QzgxQTBBMTRGMjUzQTBDIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QzAxN0JDREE3NDJBMTFFNTlDODFBMEExNEYyNTNBMEMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QzAxN0JDREI3NDJBMTFFNTlDODFBMEExNEYyNTNBMEMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz73EHvgAAAAeUlEQVR42mJgQAWaQLwYiP9D8WKoGE7ACMSdSBrQcSdUDQbwhCq4h2aDJlTsP1QNCmBFMpkLi6FcSPKsyBIWUMEYPF6JgaqxgAkwIUnewaMRQw5ZowoejVjlyPYjsaFaSE48wjDOxIAr5WgSoxmfoTDNMuRqlgEIMABowjN/iese0AAAAABJRU5ErkJggg==") 50% no-repeat;
 $bg-presentation: url(../img/bg-presentation.jpg);
+$bg-style: url(../img/style-img.png);
+$bg-section-four: url(../img/bg-forest.jpg);
+$bg-section-five: url(../img/bg-photog.jpg);
 
 // mixin @include font-size(rem);
 @mixin font-size($sizeValue: 1.6) {
@@ -40,6 +45,11 @@ $bg-presentation: url(../img/bg-presentation.jpg);
   clear: both;
 
   content: "";
+}
+
+// element block
+.block {
+  display: block !important;
 }
 
 // html set
@@ -94,6 +104,13 @@ html {
     border: 2px solid #ffffff;
     background: transparent;
     box-shadow: none;
+    &:hover {
+      background-color: $color-bg-btn-transparent;
+      text-shadow: 0 1px 2px rgba(0,0,0, .3);
+    }
+    &:active {
+      background-color: darken($color-bg-btn-transparent, 15%);
+    }
   }
   &--big {
     padding: 0 8rem;
@@ -107,20 +124,62 @@ html {
     border-radius: 18px;
 
     @include font-size(1.3);
+
+    &:active {
+      line-height: 3.2rem;
+    }
   }
 }
 
 // header
 .header {
-  background: $bg-header no-repeat center fixed;
+  background: $bg-header no-repeat 50% 50% fixed;
   background-size: cover;
   &__top {
     border-bottom: 1px solid $color-header-hr;
   }
 }
 
+.one,
+.two,
+.three{
+  width: 100%;
+  height: 4px;
+  background: white;
+  margin: 6px auto;
+  backface-visibility: hidden;
+  transition: all .3s;
+}
+
+.menu-toggle {
+  display:none;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 38px;
+  right: 20px;
+  cursor: pointer;
+  &.on {
+    .one {
+      transform: rotate(45deg) translate(5px, 7px);
+    }
+
+    .two {
+      opacity: 0;
+    }
+
+    .three {
+      transform: rotate(-45deg) translate(7px, -10px);
+    }
+  }
+}
+
+
+
 .nav {
   font-size: 0;
+  padding: 0;
+  display: block;
   &__item {
     display: inline-block;
 
@@ -278,7 +337,7 @@ html {
 
     content: "";
 
-    background: url(../img/style-img.png) center no-repeat;
+    background: $bg-style center no-repeat;
   }
 }
 
@@ -308,7 +367,7 @@ html {
 
 // section 2
 .section-two {
-  background: $bg-presentation no-repeat center fixed;
+  background: $bg-presentation no-repeat 50% 50% fixed;
   background-size: cover;
 }
 
@@ -344,17 +403,17 @@ html {
 
 // section 4
 .section-four {
-  background: url(../img/bg-forest.jpg) no-repeat  center fixed;
+  background: $bg-section-four no-repeat 50% 50% fixed;
   background-size: cover;
 }
 
 .section-four-wrap {
-  background: rgba(82,26,102,.8);
+  background: $color-section-four-wrap;
 }
 
 // section 5
 .section-five {
-  background: url(../img/bg-photog.jpg) no-repeat center fixed;
+  background: $bg-section-five no-repeat 50% 50% fixed;
   background-size: cover;
 }
 
@@ -403,6 +462,10 @@ html {
   }
   &__email {
     color: $color-second-text;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -414,22 +477,13 @@ html {
 
     color: $color-second-text;
   }
+
+  &__author {
+    color: $color-second-text;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
-// carousel
-
-.carousel {
-  max-width: 800px;
-  width: 100%;
-}
-
-.carousel-wrapper {
-  width: 600px;
-   overflow: hidden; /* скрываем содержимое, выходящее за рамки основной области */
-   position:relative;
-}
-
-.carousel-items {
-   width: 10000px; /* устанавливаем большую ширину для набора элементов */
-   position: relative; /* позиционируем блок относительно основной области карусели */
-}
