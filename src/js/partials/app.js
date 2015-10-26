@@ -2,11 +2,13 @@ $(document).ready(function () {
 
 
 // Preloader
+
+$(window).on('load', function () {
     var $preloader = $('#page-preloader'),
         $spinner   = $preloader.find('.multi');
-        
     $spinner.fadeOut();
     $preloader.delay(350).fadeOut('slow');
+});
 
 
 
